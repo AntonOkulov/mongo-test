@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  mongo:
+    image: mongo:4.2
+    volumes:
+      - "./data:/data/db"
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+
+  php:
+    user: "1000:50"
+    build: ./images/php
+    volumes:
+      - "./php:/var/www/app"
+    depends_on:
+      - mongo

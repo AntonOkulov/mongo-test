@@ -1,0 +1,15 @@
+{
+    "license": "MIT",
+    "config": {
+        "cache-files-ttl": 0
+    },
+    "require": {
+        "php": "^7.1.3",
+        "mongodb/mongodb": "^1.6"
+    },
+    "authors": [{
+        "name": "Anton Okulov",
+        "email": "qantus@mail.ru",
+        "role": "Developer"
+    }]
+}
